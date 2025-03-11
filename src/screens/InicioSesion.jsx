@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Text, TextInput, TouchableOpacity, View, Alert, StyleSheet } from "react-native";
 import { useNavigation } from "@react-navigation/native";
-import Icon from "react-native-vector-icons/Feather"; 
+import Icon from "react-native-vector-icons/Feather";
 
 const InicioSesion = () => {
   const navigation = useNavigation(); 
@@ -26,7 +26,6 @@ const InicioSesion = () => {
 
   return (
     <View style={styles.container}>
-      {/* Eliminamos el LinearGradient y usamos un fondo sólido */}
       <View style={styles.titleContainer}>
         <Text style={styles.title}>Iniciar Sesión</Text>
       </View>
@@ -64,12 +63,12 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
     padding: 20,
-    backgroundColor: "#f5f5f5", // Fondo claro para la pantalla
+    backgroundColor: "#f5f5f5", 
   },
   titleContainer: {
     paddingHorizontal: 20,
     paddingVertical: 10,
-    backgroundColor: "#FF5733", // Fondo de color sólido
+    backgroundColor: "#FF5733",
     borderRadius: 10,
     marginBottom: 20,
   },
