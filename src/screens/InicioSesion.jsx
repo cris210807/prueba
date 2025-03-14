@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { useFocusEffect } from "@react-navigation/native";
+import { useCallback } from "react";
 import { Text, TextInput, TouchableOpacity, View, Alert, StyleSheet } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import Icon from "react-native-vector-icons/Feather";
@@ -23,6 +25,13 @@ const InicioSesion = () => {
       Alert.alert("Error", "Usuario o contraseña incorrecta");
     }
   };
+  useFocusEffect(
+    useCallback(() => {
+      setUser("");
+      setPass("");
+      setMostarPass(false);
+    }, [])
+  );
 
   return (
     <View style={styles.container}>
